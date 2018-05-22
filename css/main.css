@@ -1,0 +1,93 @@
+html {	
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+body { 
+	font: 100% Arial, Helvetica, sans-serif;
+	color: #333333;
+	background-color: #fff;
+	margin: 0px;
+	padding: 0px;
+}
+h1, h2, h3, h4, h5, img {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+a {
+	color: #999;
+	text-decoration: underline;
+}
+a:visited {}
+a:hover {
+	text-decoration: none;
+}
+
+/* Container */
+.container {
+	margin:0;
+	padding: 30px;
+}
+.container .c{
+	width: 400px;
+	margin: 0 auto;
+}
+.container h1 {
+	font-size: 1.6em;
+	margin-bottom: 10px;
+	color: #008cba;
+}
+
+/* Game - Board  */
+.game .board{
+	border-collapse: collapse;	
+	font-size: 1.5em;
+	box-shadow: 0 0 3px #888;
+}
+.game .board td {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #46bcea; 
+	border:2px solid #FFF;
+
+}
+.game .board td:hover{
+	background-color: #46bcea; 
+	cursor: pointer;	
+}
+
+/* Game - Values */
+.game .board .c-unseen { background: #008cba;} 
+.game .board .c-checked { background: #46bcea url(../images/sprite.png) -82px -83px no-repeat; }
+.game .board .c-peek { background: #46bcea url(../images/sprite.png) 0 0 no-repeat;} 
+.game .board .c-mine { background: #46bcea url(../images/sprite.png) 0 0 no-repeat; }
+.game .board .c1 { color: #0000FF; }
+.game .board .c2 { color: #00FF00; }
+.game .board .c3 { color: #FF0000; }
+.game .board .c4 { color: #0a0ab9; }
+.game .board .c5 { color: #a6683b; }
+.game .board .c6 { color: #60f9ff; }
+.game .board .c7 { color: #000000; }
+.game .board .c8 { color: #666666; }
+
+
+/* Game - Buttons */
+.game .button{
+	background-color: #008cba;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 0 0 1em;
+    padding: 0.6em 1em 0.6em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 300ms ease-out 0s;
+}
+.game .button:hover{
+	background: #007095;
+	color:#fff;
+}

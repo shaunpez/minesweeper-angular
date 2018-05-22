@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Minesweeper</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="myMinesweeper">
+	<div class="container" ng-controller="minesweeper">
+		<div class="c">
+			<div class="game">
+				<h1>Minesweeper</h1>			
+
+
+				<table class="board" cellpadding="0" cellspacing="0" border="0">
+					<tbody>
+						<tr ng-repeat="row in type">
+							<td ng-click="leftClick($event)" ng-right-click="rightClick($event)" ng-repeat="cell in row" id="{{cell['id']}}" class="c{{cell['type']}}">{{cell['text']}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<a href="#" class="button" ng-click="newGame()">New Game</a>
+					<a href="#" class="button" ng-click="peek()">Peek | Cheat</a>
+					<a href="#" class="button" ng-click="validate()">Validate</a>
+				</p>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="js/angular-1.2.20.min.js"></script>
+	<script type="text/javascript" src="js/minesweeper.js"></script>
+</body>
+</html>
